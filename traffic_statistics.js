@@ -48,17 +48,17 @@ let inCurrentSpeed = speedTransform(network.inCurrentSpeed) //下载速度
 /* 判断网络类型 */
 let netType;
 if(net=="en0") {
-	netType = "WiFi"
+	netType = "Wi-Fi"
 	}else{
-	netType = "Cellular"
+	netType = "蜂窝数据"
 	}
 
 
   $done({
       title:"流量统计 | "+netType,
-      content:`流量 ➟ ${upload} | ${download}\n`+
-      `速度 ➟ ${outCurrentSpeed} | ${inCurrentSpeed}\n` +
-		`峰值 ➟ ${outMaxSpeed} | ${inMaxSpeed}`,
+      content:`流量 ➟ UP: ${upload} | DOWN: ${download}\n`+
+      `速度 ➟ UP: ${outCurrentSpeed} | DOWN: ${inCurrentSpeed}\n` +
+		`峰值 ➟ UP: ${outMaxSpeed} | DOWN: ${inMaxSpeed}`,
 		icon: params.icon,
 		  "icon-color":params.color
     });
